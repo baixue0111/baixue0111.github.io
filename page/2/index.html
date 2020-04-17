@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/13/vue3响应式-proxy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/13/微信支付/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="a Bai">
@@ -294,7 +294,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/13/vue3响应式-proxy/" itemprop="url">async 函数</a></h1>
+                <a class="post-title-link" href="/2017/12/13/微信支付/" itemprop="url">微信公众号二次开饭 - 支付功能</a></h1>
         
 
         <div class="post-meta">
@@ -329,19 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/Es6/" itemprop="url" rel="index">
-                    <span itemprop="name">Es6</span>
+                  <a href="/categories/微信支付/" itemprop="url" rel="index">
+                    <span itemprop="name">微信支付</span>
                   </a>
                 </span>
 
@@ -357,7 +346,7 @@
 
           
           
-             <span id="/2017/12/13/vue3响应式-proxy/" class="leancloud_visitors" data-flag-title="async 函数">
+             <span id="/2017/12/13/微信支付/" class="leancloud_visitors" data-flag-title="微信公众号二次开饭 - 支付功能">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -382,7 +371,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  146字
+                  518字
                 </span>
               
 
@@ -398,7 +387,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1分钟
+                  2分钟
                 </span>
               
             </div>
@@ -420,18 +409,19 @@
 
       
         
-          <h2 id="1、含义"><a href="#1、含义" class="headerlink" title="1、含义"></a>1、含义</h2><p>大家都知道，Vue2 里的响应式其实有点像是一个半完全体，对于对象上新增的属性无能为力，对于数组则需要拦截它的原型方法来实现响应式。<br>举个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        a: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ❌  oops，没反应！</span></span><br><span class="line">vm.b = <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        a: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    b() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'change !!'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ❌  oops，没反应！</span></span><br><span class="line">vm.b = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+          <h3 id="微信内H5调起支付"><a href="#微信内H5调起支付" class="headerlink" title="微信内H5调起支付"></a>微信内H5调起支付</h3><p>在微信浏览器里面打开H5网页中执行JS调起支付。接口输入输出数据格式为JSON。<br><strong>注意：</strong>WeixinJSBridge内置对象在其他浏览器中无效。<br><strong>列表中参数名区分大小，大小写错误签名验证会失败。</strong></p>
+<h4 id="getBrandWCPayRequest参数："><a href="#getBrandWCPayRequest参数：" class="headerlink" title="getBrandWCPayRequest参数："></a>getBrandWCPayRequest参数：</h4><p><img src="/images/weixin1.png" alt></p>
+<h4 id="网页内支付接口err-msg返回的结果值："><a href="#网页内支付接口err-msg返回的结果值：" class="headerlink" title="网页内支付接口err_msg返回的结果值："></a>网页内支付接口err_msg返回的结果值：</h4><p><img src="/images/weixin2.png" alt><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/13/vue3响应式-proxy/#more" rel="contents">
+            <a class="btn" href="/2017/12/13/微信支付/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     
