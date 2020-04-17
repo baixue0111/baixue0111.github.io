@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript,">
+  <meta name="keywords" content="JavaScript,ES6,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="一、undefined和null地相似性：在JavaScript中，将一个变量赋值undefined或null，几乎没什么区别。12var a = undefined;var a = null; 上面的代码中，a变量分别被赋值为undefined和null，这两种写法几乎是等价。undefined和null在if语句中，都会被自动转为false，相等运算符甚至直接报告两者相等。123456789i">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="1、含义大家都知道，Vue2 里的响应式其实有点像是一个半完全体，对于对象上新增的属性无能为力，对于数组则需要拦截它的原型方法来实现响应式。举个例子：12345678910let vm = new Vue(&amp;#123;  data() &amp;#123;    return &amp;#123;        a: 1    &amp;#125;  &amp;#125;&amp;#125;)// ❌  oops，没反应！vm.b =">
+<meta name="keywords" content="JavaScript,ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="undefined和null的区别">
-<meta property="og:url" content="http://yoursite.com/2017/11/10/undefined和null的区别/index.html">
+<meta property="og:title" content="async 函数">
+<meta property="og:url" content="http://yoursite.com/2017/12/13/vue3响应式-proxy/index.html">
 <meta property="og:site_name" content="web前端 - 小白">
-<meta property="og:description" content="一、undefined和null地相似性：在JavaScript中，将一个变量赋值undefined或null，几乎没什么区别。12var a = undefined;var a = null; 上面的代码中，a变量分别被赋值为undefined和null，这两种写法几乎是等价。undefined和null在if语句中，都会被自动转为false，相等运算符甚至直接报告两者相等。123456789i">
+<meta property="og:description" content="1、含义大家都知道，Vue2 里的响应式其实有点像是一个半完全体，对于对象上新增的属性无能为力，对于数组则需要拦截它的原型方法来实现响应式。举个例子：12345678910let vm = new Vue(&amp;#123;  data() &amp;#123;    return &amp;#123;        a: 1    &amp;#125;  &amp;#125;&amp;#125;)// ❌  oops，没反应！vm.b =">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-17T07:53:25.161Z">
+<meta property="og:updated_time" content="2020-04-17T09:12:04.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="undefined和null的区别">
-<meta name="twitter:description" content="一、undefined和null地相似性：在JavaScript中，将一个变量赋值undefined或null，几乎没什么区别。12var a = undefined;var a = null; 上面的代码中，a变量分别被赋值为undefined和null，这两种写法几乎是等价。undefined和null在if语句中，都会被自动转为false，相等运算符甚至直接报告两者相等。123456789i">
+<meta name="twitter:title" content="async 函数">
+<meta name="twitter:description" content="1、含义大家都知道，Vue2 里的响应式其实有点像是一个半完全体，对于对象上新增的属性无能为力，对于数组则需要拦截它的原型方法来实现响应式。举个例子：12345678910let vm = new Vue(&amp;#123;  data() &amp;#123;    return &amp;#123;        a: 1    &amp;#125;  &amp;#125;&amp;#125;)// ❌  oops，没反应！vm.b =">
 
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/10/undefined和null的区别/">
+  <link rel="canonical" href="http://yoursite.com/2017/12/13/vue3响应式-proxy/">
 
 
 
@@ -149,7 +149,7 @@
     }
 </style>
 
-  <title>undefined和null的区别 | web前端 - 小白</title>
+  <title>async 函数 | web前端 - 小白</title>
   
 
 
@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/10/undefined和null的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/13/vue3响应式-proxy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="a Bai">
@@ -293,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">undefined和null的区别</h1>
+          <h1 class="post-title" itemprop="name headline">async 函数</h1>
         
 
         <div class="post-meta">
@@ -305,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-10T00:00:00+08:00">
-                2017-11-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T00:00:00+08:00">
+                2017-12-13
               </time>
             
 
@@ -335,6 +335,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JavaScript/Es6/" itemprop="url" rel="index">
+                    <span itemprop="name">Es6</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -345,7 +356,7 @@
 
           
           
-             <span id="/2017/11/10/undefined和null的区别/" class="leancloud_visitors" data-flag-title="undefined和null的区别">
+             <span id="/2017/12/13/vue3响应式-proxy/" class="leancloud_visitors" data-flag-title="async 函数">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -370,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  680字
+                  146字
                 </span>
               
 
@@ -386,7 +397,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  1分钟
                 </span>
               
             </div>
@@ -407,28 +418,10 @@
       
 
       
-        <h3 id="一、undefined和null地相似性："><a href="#一、undefined和null地相似性：" class="headerlink" title="一、undefined和null地相似性："></a>一、undefined和null地相似性：</h3><p>在JavaScript中，将一个变量赋值undefined或null，几乎没什么区别。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure></p>
-<p>上面的代码中，a变量分别被赋值为undefined和null，这两种写法几乎是等价。undefined和null在if语句中，都会被自动转为false，相等运算符甚至直接报告两者相等。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!<span class="literal">undefined</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'undefined is false'</span>);  <span class="comment">// undefined is false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!<span class="literal">null</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'null is false'</span>);  <span class="comment">// null is undefined</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span>;  <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
-<p>上面的代码说明，两者的行为是何等相似！<br>既然undefined和null的含义与用法都差不多，为什么要同时设置两个这样的值呢？</p>
-<h3 id="二、历史原因？"><a href="#二、历史原因？" class="headerlink" title="二、历史原因？"></a>二、历史原因？</h3><p>这与JavaScript的历史有关。1995年<a href="http://www.ruanyifeng.com/blog/2011/06/birth_of_JavaScript.html" target="_blank" rel="noopener">JavaScript诞生</a>时，最初像java一样，只设置了null作为表示“无”的值。根据C语言的传统，null被设计成可以自动转为0；<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="literal">null</span>);  <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span> + <span class="literal">null</span>);   <span class="comment">// 5</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="1、含义"><a href="#1、含义" class="headerlink" title="1、含义"></a>1、含义</h2><p>大家都知道，Vue2 里的响应式其实有点像是一个半完全体，对于对象上新增的属性无能为力，对于数组则需要拦截它的原型方法来实现响应式。<br>举个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        a: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ❌  oops，没反应！</span></span><br><span class="line">vm.b = <span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        a: <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    b() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'change !!'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ❌  oops，没反应！</span></span><br><span class="line">vm.b = <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>但是JavaScript的设计者Brendan Eich，觉得这样做还不够，有两个原因。<br><strong>首先</strong>，null像在java里一样，被当成一个对象，但是JavaScript的数据类型分成原始类型和合成类型两大类，Brendan Eich觉得表示“无”的值最好不是对象。<br><strong>其次</strong>JavaScript的最初版本没有包括错误处理机制，发生数据类型不匹配时，往往是自动转换类型或者默认失败。Brendan Eich觉得，如果null自动转转为0，很不容易发生错误。因此又设计了一个undefined。</p>
-<h3 id="三、最初设计"><a href="#三、最初设计" class="headerlink" title="三、最初设计"></a>三、最初设计</h3><p>JavaScript的最初版本是这样区分的：<strong>null是一个表示“无”的对象，转为数值是0；undefined是一个表示“无”的原始值，转为数值为NaN。</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="literal">undefined</span>);  <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span> + <span class="literal">NaN</span>);  <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="四、目前的用法"><a href="#四、目前的用法" class="headerlink" title="四、目前的用法"></a>四、目前的用法</h3><p>上面这样的区分，在实践中很快就被证明不行。目前，null和undefined基本都是同义的，只有一些细微的差别。<strong>null表示“没有对象”，即该处不应该有值</strong>。典型用法是：</p>
-<ul>
-<li>作为函数的参数，表示该函数的参数不是对象。</li>
-<li>作为对象原型链的终点。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.getPrototypeOf(<span class="built_in">Object</span>.prototype);  <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong>undefined表示“缺少值”，就是此处应该有一个值，但是还没有定义。</strong>典型用法是：</p>
-<ul>
-<li>变量被声明了，但没有赋值，就等于undefined。</li>
-<li>调用该函数时，应该提供的参数没有提供，该参数等于undefined。</li>
-<li>对象没有赋值的属性，该属性的值为undefined。</li>
-<li>函数没有返回值时，默认返回undefined。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i;   <span class="comment">// i  undefined</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">f();  <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">o.p  <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">var</span> x = f();</span><br><span class="line">x;  <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>原文链接:<br><a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html</a></p>
+<p>详情内容请查看原文档。原文链接：(<a href="https://mp.weixin.qq.com/s/vWUO_JFSQbBjbK14wudkEA" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/vWUO_JFSQbBjbK14wudkEA</a>)</p>
 
       
     </div>
@@ -458,6 +451,8 @@
           
             <a href="/tags/JavaScript/" rel="tag"><i class="fa fa-tag"></i> JavaScript</a>
           
+            <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
+          
         </div>
       
 
@@ -469,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/26/Promise 对象/" rel="next" title="Promise 对象">
-                <i class="fa fa-chevron-left"></i> Promise 对象
+              <a href="/2017/12/11/javascript之bind/" rel="next" title="JavaScript之bind">
+                <i class="fa fa-chevron-left"></i> JavaScript之bind
               </a>
             
           </div>
@@ -479,8 +474,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/12/理解Vuex—vue的状态管理模式/" rel="prev" title="理解vuex--vue的状态管理模式">
-                理解vuex--vue的状态管理模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/13/微信支付/" rel="prev" title="微信公众号二次开饭 - 支付功能">
+                微信公众号二次开饭 - 支付功能 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -643,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、undefined和null地相似性："><span class="nav-number">1.</span> <span class="nav-text">一、undefined和null地相似性：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、历史原因？"><span class="nav-number">2.</span> <span class="nav-text">二、历史原因？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、最初设计"><span class="nav-number">3.</span> <span class="nav-text">三、最初设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、目前的用法"><span class="nav-number">4.</span> <span class="nav-text">四、目前的用法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、含义"><span class="nav-number">1.</span> <span class="nav-text">1、含义</span></a></li></ol></div>
             
 
           </div>
